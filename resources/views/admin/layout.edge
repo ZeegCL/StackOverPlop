@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>StackOverPlop</title>
+
+  {{ style('css/app') }}
+  {{ style('css/third_party') }}
+  {{ script('js/app') }}
+  {{ script('js/third_party') }}
+
+</head>
+<body>
+  <header>
+    <nav class="pink accent-2">
+      <div class="nav-wrapper row">
+        <div class="col s4 white-text">
+          <a href="{{ route('home') }}" class="brand-logo">
+            <strong>StackOverPlop</strong>
+          </a>
+        </div>
+        <a href="#" data-target="nav-mobile" class="sidenav-trigger right"><i class="material-icons">menu</i></a>
+        <div class="right hide-on-med-and-down col s8">
+          @!section('navigation')
+
+          <div class="right">
+            <a href="#" tile="Log out"><i class="material-icons">exit_to_app</i></a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <div class="sidenav" id="nav-mobile">
+      @!include('admin.partials.navigation')
+    </div>
+  </header>
+
+  <div class="row">
+    <div class="col m3">
+      @!include('admin.partials.navigation')
+    </div>
+    <div class="col s12 m9">
+      <div class="card">
+        <div class="card-content">
+          <div class="row">
+            <div class="col s12">
+              @!section('page-header')
+            </div>
+          </div>
+          <div class="row">
+            <div class="col s12">
+              @!section('contents')
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <footer>
+    <p class="center-align white-text">
+      Made with 💖 by <a href="https://github.com/BloodyLink">@BloodyLink</a> and <a href="https://github.com/ZeegCL">@ZeegCL</a>
+    </p>
+  </footer>
+</body>
+</html>

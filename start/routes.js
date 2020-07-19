@@ -28,5 +28,7 @@ Route.on('/hot').render('forum.index').as('hot');
 Route.on('/category').render('forum.category').as('category');
 Route.on('/thread').render('forum.thread.show').as('thread');
 
+Route.on('/admin').render('admin.index').as('admin');
+
 Route.resource('forum', 'ForumController').middleware('auth')
 Route.resource('users', 'UserController').middleware('auth')

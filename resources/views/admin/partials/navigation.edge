@@ -1,0 +1,12 @@
+<div class="collection">
+
+  <a class="collection-item active {{ routeName() === 'admin.users' ? 'active' : '' }}"
+      href="{{ route('admin.users') }}">Users</a>
+
+  <a class="collection-item  {{ routeName() === 'admin.roles' ? 'active' : '' }}"
+    href="{{ route('admin.roles') }}">Roles</a>
+
+  <a class="collection-item  {{ routeName() === 'admin.categories' ? 'active' : '' }}"
+    href="{{ route('admin.categories') }}">Categories</a>
+
+</div>
