@@ -1,0 +1,14 @@
+<ul>
+  <li class="{{ routeName() === 'forum' ? 'active' : '' }}">
+    <a href="{{ route('forum') }}">Home</a>
+  </li>
+  <li class="{{ routeName() === 'latest' ? 'active' : '' }}">
+    <a href="{{ route('latest') }}">Latest</a>
+  </li>
+  <li class="{{ routeName() === 'hot' ? 'active' : '' }}">
+    <a href="{{ route('hot') }}">Hot</a>
+  </li>
+  <li>
+    <a href="#" tile="Log out"><i class="material-icons">exit_to_app</i></a>
+  </li>
+</ul>

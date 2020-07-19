@@ -1,0 +1,16 @@
+@layout('layout')
+
+@section('left-column')
+<img src="{{ assetsUrl('img/doge-face-wut.png') }}" alt="StackOverWoff">
+@endsection
+
+@section('right-column')
+<div class="white-text center-align">
+  <h2>Welcome to<br><span class="smaller">StackOverPlop</span></h2>
+  <p>The coolest forum around.</p>
+  <div class="section">
+    <a href="{{ route('login')}}" class="btn waves-effect waves-light blue-grey lighten-5 black-text">Log In</a>
+    <a href="{{ route('register')}}" class="btn waves-effect waves-light pink accent 2 white-text">Register</a>
+  </div>
+</div>
+@endsection

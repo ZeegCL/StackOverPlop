@@ -1,0 +1,31 @@
+@layout('layout')
+
+@section('left-column')
+<div class="row">
+  <form action="" class="col s12">
+    <div class="row">
+      <div class="input-field col s12">
+        <input type="email" id="email" name="email" placeholder="example@stackoverplop.com" class="validate white-text">
+        <label for="email">Email</label>
+      </div>
+      <div class="input-field col s12">
+        <input type="password" id="password" name="password" placeholder="********" class="validate white-text">
+        <label for="password">Password</label>
+      </div>
+      <div class="col s12">
+        <input type="submit" value="Log In" class="btn-large pink accent-2">
+      </div>
+    </div>
+  </form>
+</div>
+@endsection
+
+@section('right-column')
+<div class="container white-text">
+  <h1>Log In</h1>
+  <p>Don't have an account? <a href="{{ route('register')}}">Register</a></p>
+  <a href="{{ route('home')}}" class="waves-effect waves-light btn blue-grey lighten-5 black-text">
+    <i class="material-icons left">arrow_back</i> go back
+  </a>
+</div>
+@endsection

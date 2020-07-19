@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>StackOverPlop</title>
+
+  {{ style('css/third_party') }}
+  {{ style('css/app') }}
+  {{ script('js/third_party') }}
+  {{ script('js/app') }}
+
+</head>
+<body>
+  <header>
+    <nav class="pink accent-2">
+      <div class="nav-wrapper row">
+        <div class="col s4 white-text">
+          <a href="{{ route('home') }}" class="brand-logo">
+            <strong>StackOverPlop</strong>
+          </a>
+        </div>
+        <a href="#" data-target="nav-mobile" class="sidenav-trigger right"><i class="material-icons">menu</i></a>
+        <div class="right hide-on-med-and-down col s8">
+          @!section('navigation')
+
+          <div class="right">
+            @!include('forum.partials.navigation')
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <div class="sidenav" id="nav-mobile">
+      @!include('forum.partials.navigation')
+    </div>
+  </header>
+
+  <div class="container">
+    <div class="row">
+      <div class="col s12">
+        @!section('page-header')
+      </div>
+    </div>
+    <div>
+      <div class="col s12">
+        @!section('contents')
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <p class="center-align white-text">
+      Made with 💖 by <a href="https://github.com/BloodyLink">@BloodyLink</a> and <a href="https://github.com/ZeegCL">@ZeegCL</a>
+    </p>
+  </footer>
+</body>
+</html>

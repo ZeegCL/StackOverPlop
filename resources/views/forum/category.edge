@@ -1,0 +1,17 @@
+@layout('forum.layout')
+
+@section('page-header')
+<div class="white-text">
+  <div class="section">
+    <a href="{{ route('forum') }}"><i class="material-icons left">arrow_back</i> Go back</a>
+  </div>
+  <h1>Category Name</h1>
+</div>
+@endsection
+
+@section('contents')
+@!component('forum.partials.thread-item', title = 'First thread on this category', author = 'A friendly dogo', description = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.')
+@!component('forum.partials.thread-item', title = 'Second thread on this category', author = 'A friendly dogo', description = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.')
+@!component('forum.partials.thread-item', title = 'Third thread on this category', author = 'A friendly dogo', description = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.')
+@!component('forum.partials.thread-item', title = 'Fourth thread on this category', author = 'A friendly dogo', description = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.')
+@endsection

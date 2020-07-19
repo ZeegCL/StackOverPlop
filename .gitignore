@@ -14,3 +14,9 @@ database/*.sqlite
 # VSCode & Webstorm history directories
 .history
 .idea
+
+# Ignore public folder, since everything must be bundled from resources folder
+public/*
+
+# macOS
+*.DS_Store
