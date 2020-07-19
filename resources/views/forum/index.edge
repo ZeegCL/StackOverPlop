@@ -1,0 +1,15 @@
+@layout('forum.layout')
+
+@section('page-header')
+<div class="white-text">
+  <h1>Nice to see you here!</h1>
+  <p>Take a look at the categories and it's latest threads.</p>
+</div>
+@endsection
+
+@section('contents')
+@!component('forum.partials.category-item', name = 'First Category')
+@!component('forum.partials.category-item', name = 'Second Category')
+@!component('forum.partials.category-item', name = 'Third Category')
+@!component('forum.partials.category-item', name = 'Fourth Category')
+@endsection

@@ -94,17 +94,12 @@ article, aside, footer, header, nav, section {
   display: block;
 }
 
-a {
-  color: inherit;
-  text-decoration: underline;
-}
-
-p {
-  margin: 0.83rem 0;
-}
-
 hr {
   margin: 40px 0;
+}
+
+strong {
+  font-weight: bold;
 }
 
 @keyframes slideUp {

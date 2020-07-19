@@ -22,5 +22,11 @@ Route.on('/').render('home').as('home');
 Route.on('/login').render('auth.login').as('login');
 Route.on('/register').render('auth.register').as('register');
 
+Route.on('/forum').render('forum.index').as('forum');
+Route.on('/latest').render('forum.index').as('latest');
+Route.on('/hot').render('forum.index').as('hot');
+Route.on('/category').render('forum.category').as('category');
+Route.on('/thread').render('forum.thread.show').as('thread');
+
 Route.resource('forum', 'ForumController').middleware('auth')
 Route.resource('users', 'UserController').middleware('auth')
