@@ -1,0 +1,47 @@
+@layout('layout')
+
+@section('left-column')
+<div class="row">
+  <form action="" class="col s12">
+    <div class="row">
+      <div class="input-field col s12">
+        <input type="text" id="username" name="username" placeholder="My cool username" class="validate white-text">
+        <label for="username">Username</label>
+      </div>
+      <div class="input-field col s12">
+        <input type="email" id="email" name="email" placeholder="example@stackoverplop.com" class="validate white-text">
+        <label for="email">Email</label>
+      </div>
+      <div class="input-field col s12">
+        <input type="password" id="password" name="password" placeholder="********" class="validate white-text">
+        <label for="password">Password</label>
+      </div>
+      <div class="col s12">
+        <label for="profile_picture">Profile picture</label>
+        <div class="input-field file-field">
+          <div class="btn-small blue-grey lighten-5 black-text">
+            <span>Browse</span>
+            <input type="file" id="profile_picture" name="profile_picture">
+          </div>
+          <div class="file-path-wrapper">
+            <input class="file-path validate white-text" type="text" placeholder="Upload file" />
+          </div>
+        </div>
+      </div>
+      <div class="col s12">
+        <input type="submit" value="Register" class="btn-large pink accent-2">
+      </div>
+    </div>
+  </form>
+</div>
+@endsection
+
+@section('right-column')
+<div class="container white-text">
+  <h1>Register</h1>
+  <p>Already have an account? <a href="{{ route('login')}}">Log In</a></p>
+  <a href="{{ route('home')}}" class="waves-effect waves-light btn blue-grey lighten-5 black-text">
+    <i class="material-icons left">arrow_back</i> go back
+  </a>
+</div>
+@endsection

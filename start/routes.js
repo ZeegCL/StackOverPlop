@@ -16,6 +16,11 @@
 /** @type {typeof import('@adonisjs/framework/src/Route/Manager')} */
 const Route = use('Route')
 
-Route.on('/').render('welcome')
+Route.on('/').render('home').as('home');
+
+// Auth
+Route.on('/login').render('auth.login').as('login');
+Route.on('/register').render('auth.register').as('register');
+
 Route.resource('forum', 'ForumController').middleware('auth')
 Route.resource('users', 'UserController').middleware('auth')

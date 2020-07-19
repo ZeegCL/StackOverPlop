@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>StackOverPlop</title>
+
+  {{ style('css/third_party') }}
+  {{ style('css/app') }}
+  {{ script('js/third_party') }}
+  {{ script('js/app') }}
+
+</head>
+<body class="vcenter-flex">
+  <div class="container">
+    <div class="row section">
+      <section class="col s12 l6">
+        @section('left-column')
+        @endsection
+      </section>
+      <section class="col s12 l6">
+        @section('right-column')
+        @endsection
+      </section>
+    </div>
+  </div>
+
+  <footer>
+    <p class="center-align white-text">
+      Made with 💖 by <a href="https://github.com/BloodyLink">@BloodyLink</a> and <a href="https://github.com/ZeegCL">@ZeegCL</a>
+    </p>
+  </footer>
+</body>
+</html>
