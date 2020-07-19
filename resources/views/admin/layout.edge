@@ -21,11 +21,11 @@
           </a>
         </div>
         <a href="#" data-target="nav-mobile" class="sidenav-trigger right"><i class="material-icons">menu</i></a>
-        <div class="right hide-on-med-and-down col s8">
+        <div class="right col s8">
           @!section('navigation')
 
-          <div class="right">
-            <a href="#" tile="Log out"><i class="material-icons">exit_to_app</i></a>
+          <div class="right hide-on-med-and-down">
+            <a href="#" tile="Log out"><i class="material-icons right">exit_to_app</i> Log out</a>
           </div>
         </div>
       </div>
@@ -37,9 +37,13 @@
   </header>
 
   <div class="row">
-    <div class="col m3">
+
+    <!-- left navigation -->
+    <div class="col m3 hide-on-med-and-down col">
       @!include('admin.partials.navigation')
     </div>
+
+    <!-- contents -->
     <div class="col s12 m9">
       <div class="card">
         <div class="card-content">
