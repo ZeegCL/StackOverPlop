@@ -18,7 +18,9 @@ class ForumController {
    * @param {View} ctx.view
    */
   async index({ request, response, view }) {
-    return view.render('forum.index')
+    const Message = use('App/Models/Message')
+    const messages = await Message.query().where('parent_message_id', null).paginate(1, 20)
+    return view.render('forum.index', { messages: messages.toJson() })
   }
 
   /**
@@ -61,7 +63,7 @@ class ForumController {
   async show({ params, request, response, view }) {
     const Message = use('App/Models/Message')
     const message = await Message.find(params.id)
-    return view.render('forum.thread', { message: message.toJson() })
+    return view.render('forum.thread.show', { message: message.toJson() })
   }
 
   /**
@@ -76,7 +78,7 @@ class ForumController {
   async edit({ params, request, response, view }) {
     const Message = use('App/Models/Message')
     const message = await Message.find(params.id)
-    return view.render('forum.thread', { message: message.toJson() })
+    return view.render('forum.thread.edit', { message: message.toJson() })
   }
 
   /**
