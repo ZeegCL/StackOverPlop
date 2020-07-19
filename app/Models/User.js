@@ -38,6 +38,10 @@ class User extends Model {
   roles () {
     return this.belongsToMany('App/Models/Role').pivotTable('user_roles')
   }
+
+  messages () {
+    return this.hasMany('App/Models/Message')
+  }
 }
 
 module.exports = User
